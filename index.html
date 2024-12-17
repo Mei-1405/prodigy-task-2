@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foocus Stopwatch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">FOOCUS</h1>
+
+    <!-- Day/Night Mode Switch -->
+    <div class="mode-switch">
+        <img id="mode-icon" class="mode-icon" src="https://img.icons8.com/?size=160&id=111603&format=png" alt="day-mode" onclick="toggleMode()">
+
+        <!-- <span id="mode-icon" class="mode-icon" alt="day-mode" onclick="toggleMode()">🌞</span>  -->
+    </div>
+
+    <div class="container">
+        <!-- Stopwatch Section -->
+        <div class="stopwatch">
+            <div class="time">
+                <div class="digit" id="minutes">00</div>:
+                <div class="digit" id="seconds">00</div>:
+                <div class="digit" id="milliseconds">00</div>
+            </div>
+            <div class="buttons">
+                <button id="start" onclick="startStopwatch()"><i class="fa-solid fa-play"></i></button>
+                <button id="pause" class="hidden" onclick="pauseStopwatch()"><i class="fa-solid fa-pause"></i></button>
+                <button id="lap" class="hidden" onclick="addLap()"><i class="fa-solid fa-flag"></i></button>
+                <button id="stop" class="hidden" onclick="stopStopwatch()"><i class="fa-solid fa-square"></i></button>
+                <button id="reset" class="hidden" onclick="resetStopwatch()">Reset</button>
+            </div>
+        </div>
+
+        <!-- Laps Section -->
+        <div class="laps" id="laps">
+            <div id="lap-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
